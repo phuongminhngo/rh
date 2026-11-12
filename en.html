@@ -151,6 +151,7 @@ th .thf .lgs{display:inline-flex}
 th .thf .lgs .lg+.lg{margin-left:-4px;box-shadow:0 0 0 1.5px var(--b-bg)}
 .tmenu hr{margin:4px 2px}
 .board{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:start}
+.board.roles{grid-template-columns:repeat(4,minmax(0,1fr))}
 tr.grp{cursor:default}
 .gtog{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:2px 6px 2px 2px;border-radius:4px;cursor:var(--cur-p);font:inherit;color:inherit}
 .gtog:hover{background:var(--hover)}
@@ -468,7 +469,7 @@ details.tg>.tb{padding:6px 0 4px 22px}
 .vids a em{font-style:normal;color:var(--fg-3);font-size:12.5px}
 
 @media (max-width:760px){
-  .board{grid-template-columns:1fr;gap:18px}
+  .board,.board.roles{grid-template-columns:1fr;gap:18px}
   .board .card{display:grid;grid-template-columns:96px minmax(0,1fr);align-items:stretch}
   .board .card .thumb{aspect-ratio:auto;height:100%;min-height:66px;border-bottom:0;border-right:1px solid var(--line)}
   .board .card .thumb .big{font-size:18px}
@@ -563,8 +564,9 @@ details.tg>.tb{padding:6px 0 4px 22px}
   </details>
   </div>
   <div class="views" role="tablist" aria-label="Views of the HR missions database">
-   <button role="tab" id="v-etape" data-v="etape" aria-selected="false"><svg aria-hidden="true"><use href="#i-board"/></svg>By stage</button>
    <button role="tab" id="v-tableau" data-v="tableau" aria-selected="true"><svg aria-hidden="true"><use href="#i-table"/></svg>Table</button>
+   <button role="tab" id="v-role" data-v="role" aria-selected="false"><svg aria-hidden="true"><use href="#i-grid"/></svg>Gallery by role</button>
+   <button role="tab" id="v-etape" data-v="etape" aria-selected="false"><svg aria-hidden="true"><use href="#i-board"/></svg>Gallery by stage</button>
    <span class="count" id="mcount">16 missions · 1 year</span>
   </div>
   <div id="db" role="tabpanel"></div>
@@ -848,6 +850,8 @@ function render(keep){
  const mc=document.getElementById("mcount");if(mc)mc.textContent=anyF()?`${M.length} mission${M.length>1?"s":""} of ${M_ALL} · filtered`:`${M.length} missions · 1 year`;
  if(view==="etape"){
   db.innerHTML=`<div class="board">${STAGES.map(s=>{const it=M.filter(m=>m.s.includes(s));return `<div class="col"><div class="col-h"><span class="tag ${s}">${s}</span>${it.length}</div>${it.map(m=>card(m,false)).join("")}</div>`}).join("")}</div>`;
+ }else if(view==="role"){
+  db.innerHTML=`<div class="board roles">${ROLES.map(([r,cl])=>{const it=M.filter(m=>(ROLE_OF[m.id]||[]).includes(r)).sort((a,b)=>STAGES.indexOf(a.s[0])-STAGES.indexOf(b.s[0]));return `<div class="col"><div class="col-h"><span class="tag ${cl}">${r}</span>${it.length}</div>${it.map(m=>card(m,true)).join("")}</div>`}).join("")}</div>`;
  }else if(view==="galerie"){
   db.innerHTML=`<div class="gallery">${M.map(m=>card(m,true)).join("")}</div>`;
  }else{
@@ -865,7 +869,7 @@ document.querySelectorAll(".views button").forEach(b=>b.addEventListener("click"
  view=b.dataset.v;document.querySelectorAll(".views button").forEach(x=>x.setAttribute("aria-selected",x===b?"true":"false"));render();
  try{localStorage.setItem("pn-view2",view)}catch(e){}
 }));
-try{const v=localStorage.getItem("pn-view2");if(v&&["etape","tableau"].includes(v)){view=v;document.querySelectorAll(".views button").forEach(x=>x.setAttribute("aria-selected",x.dataset.v===v?"true":"false"))}}catch(e){}
+try{const v=localStorage.getItem("pn-view2");if(v&&["etape","tableau","role"].includes(v)){view=v;document.querySelectorAll(".views button").forEach(x=>x.setAttribute("aria-selected",x.dataset.v===v?"true":"false"))}}catch(e){}
 render();
 document.querySelectorAll(".rlink").forEach(b=>b.addEventListener("click",()=>{
  document.getElementById("v-tableau").click();
