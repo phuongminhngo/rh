@@ -82,6 +82,7 @@ h2 .hst{width:.62em;height:.62em;margin-left:.35em;vertical-align:.32em;transfor
 
 h2 .emo{display:inline-block;margin-right:10px;font-size:.95em}
 .props{display:grid;gap:2px;margin-bottom:12px}
+.mfold-btn{display:none}
 .prop{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px;align-items:start;font-size:14px;padding:4px 6px;border-radius:4px}
 .prop:hover{background:var(--hover)}
 .prop .k{color:var(--fg-2);display:flex;align-items:center;gap:7px}
@@ -485,6 +486,9 @@ details.tg>.tb{padding:6px 0 4px 22px}
   .flag .fv{border-right:0;border-bottom:1px solid var(--line)}
   .two{grid-template-columns:1fr;gap:4px}
   .prop{grid-template-columns:112px minmax(0,1fr)}
+  .props:not(.open) .mfold{display:none}
+  .mfold-btn{display:block;justify-self:start;margin:2px 0 2px 126px;padding:3px 8px;border:1px solid var(--line);border-radius:4px;background:none;font-size:13px;color:var(--fg-2);cursor:var(--cur-p)}
+  .props.open .mfold-btn{display:none}
   .steps li{grid-template-columns:1fr;gap:0}
   .pk-in{padding:16px max(18px,env(safe-area-inset-left,0px)) 40px 18px}
   .pk-in h3.ph{font-size:24px}
@@ -540,9 +544,10 @@ details.tg>.tb{padding:6px 0 4px 22px}
    <div class="prop"><span class="k"><svg><use href="#i-bag"/></svg>Expérience</span><span class="v">3 ans à temps plein, 7 ans au total · France et Vietnam</span></div>
    <div class="prop"><span class="k"><svg><use href="#i-lang"/></svg>Langues</span><span class="v"><span class="tag tl-canva" data-t="Français">Français<span class="apps">B2, avancé</span></span><span class="tag tl-google" data-t="Anglais">Anglais<span class="apps">Bilingue</span></span><span class="tag red" data-t="Vietnamien">Vietnamien<span class="apps">Niveau natif</span></span></span></div>
    <div class="prop"><span class="k"><svg><use href="#i-grid"/></svg>Compétences SIRH</span><span class="v"><span class="tag tl-google">Administration & paramétrage</span><span class="tag tl-slack">Support utilisateurs</span><span class="tag tl-ms">Données & reporting</span><span class="tag tl-tally">Process & automatisation</span><span class="tag tl-canva">Formation & conduite du changement</span><span class="tag tl-notion">Gestion des temps (GTA)</span></span></div>
-   <div class="prop"><span class="k"><svg><use href="#i-tool"/></svg>Outils SIRH</span><span class="v"><span class="tag tl-google" data-t="Lucca">Lucca<span class="apps">SIRH</span></span><span class="tag tl-tally" data-t="PayFit">PayFit<span class="apps">Paie</span></span><span class="tag tl-canva" data-t="Workday">Workday<span class="apps">HCM</span></span><span class="tag tl-slack" data-t="Remote">Remote<span class="apps">EOR</span></span><span class="tag tl-notion" data-t="Deel">Deel<span class="apps">EOR</span></span></span></div>
-   <div class="prop"><span class="k"><svg><use href="#i-table"/></svg>Données & process</span><span class="v"><span class="tag" data-t="Excel">Excel<span class="apps">tableaux de bord</span></span><span class="tag">Power BI</span><span class="tag">Notion</span><span class="tag">Slack Workflow</span><span class="tag">Tally</span><span class="tag">Jira</span><span class="tag" data-t="Google Workspace">Google Workspace<span class="apps">Docs, Sheets, Slides, Forms, Drive</span></span><span class="tag" data-t="Microsoft 365">Microsoft 365<span class="apps">Word, PowerPoint, Outlook, Teams</span></span></span></div>
-   <div class="prop"><span class="k"><svg><use href="#i-star"/></svg>Création</span><span class="v"><span class="tag">Figma</span><span class="tag">Canva</span><span class="tag">Photoshop</span><span class="tag">CapCut</span><span class="tag">DaVinci Resolve</span></span></div>
+   <div class="prop"><span class="k"><svg><use href="#i-tool"/></svg>Outils SIRH</span><span class="v"><span class="tag tl-canva" data-t="Workday">Workday<span class="apps">HCM</span></span><span class="tag tl-slack" data-t="Remote">Remote<span class="apps">Contrats EOR, congés, suivi des temps</span></span><span class="tag tl-notion" data-t="Deel">Deel<span class="apps">Contrats EOR, congés, suivi des temps</span></span></span></div>
+   <div class="prop mfold"><span class="k"><svg><use href="#i-table"/></svg>Données & process</span><span class="v"><span class="tag" data-t="Excel">Excel<span class="apps">tableaux de bord</span></span><span class="tag">Notion</span><span class="tag">Slack Workflow</span><span class="tag">Tally</span><span class="tag">Jira</span><span class="tag" data-t="Google Workspace">Google Workspace<span class="apps">Docs, Sheets, Slides, Forms, Drive</span></span><span class="tag" data-t="Microsoft 365">Microsoft 365<span class="apps">Word, PowerPoint, Outlook, Teams</span></span></span></div>
+   <div class="prop mfold"><span class="k"><svg><use href="#i-star"/></svg>Création</span><span class="v"><span class="tag">Figma</span><span class="tag">Canva</span><span class="tag">Photoshop</span><span class="tag">CapCut</span><span class="tag">DaVinci Resolve</span></span></div>
+   <button type="button" class="mfold-btn" aria-expanded="false">Voir tous les outils <span aria-hidden="true">↓</span></button>
    <div class="prop"><span class="k"><svg><use href="#i-chat"/></svg>Contact</span><span class="v"><a href="https://calendar.app.google/PbR8fZyYBmeqijxz7" target="_blank" rel="noopener">Planifier un échange</a></span></div>
   </div>
   <div class="callout">
@@ -693,7 +698,7 @@ details.tg>.tb{padding:6px 0 4px 22px}
 const M=[
 {id:"dashboard",n:"Tableau de bord RH",s:["Fidéliser"],d:"Reporting RH automatisé sur Excel",tools:["Excel"],co:"Projet personnel",cover:{img:"portfolio/dashboard.jpg"},
  ctx:"Un projet personnel, sur des données fictives, pour montrer ma méthode de reporting RH.",
- did:"Un tableau de bord RH qui se met à jour seul : effectif, entrées et sorties, turnover, absentéisme et répartition par équipe et par contrat, prestataires et EOR compris.",items:["Données structurées en tableaux (effectifs, absences), prêtes à importer dans Power BI","Indicateurs calculés par formules, à partir d'une date de référence modifiable","Effectif mensuel et jours d'absence sur 12 mois","Règles de calcul documentées dans le fichier"],
+ did:"Un tableau de bord RH qui se met à jour seul : effectif, entrées et sorties, turnover, absentéisme et répartition par équipe et par contrat, prestataires et EOR compris.",items:["Données structurées en tableaux (effectifs, absences), faciles à mettre à jour","Indicateurs calculés par formules, à partir d'une date de référence modifiable","Effectif mensuel et jours d'absence sur 12 mois","Règles de calcul documentées dans le fichier"],
  res:[["6","indicateurs clés et 4 graphiques, recalculés automatiquement"]],
  sites:[{t:"Télécharger le fichier Excel",d:"tableau-de-bord-rh.xlsx · données fictives",u:"portfolio/tableau-de-bord-rh.xlsx",dl:1}]},
 {id:"site",n:"Site Cloudi-Fi",s:["Attirer"],d:"2 pages repensées et recréées",tools:["Figma"],cover:{web:["Our company","Join us"]},
@@ -786,6 +791,7 @@ function thumb(m){
 const R1={"dashboard":["6","indicateurs recalculés automatiquement"],"okrs-slack":["0 → Slack","un suivi des OKRs là où il n'y en avait aucun"],"conges-slack":["100 %","d'adoption, sans nouvelle licence"],"site":["2 ans","d'attente, relancé par ma maquette et adopté"],"starting-guide":["Notion → Slack","pour réduire les coûts de licence"],"calendrier-presta":["0 → 100 %","des absences sur un process standardisé"],"entretien-annuel":["0 → 100 %","des entretiens sur un process standardisé"],"handbook":["100 %","du handbook intégré dans Slack"],"linkedin":["57 %","des recrutements via LinkedIn"],"webinar":["4","Cloudi-Fiers sur scène"],"recrutement":["2 324","candidatures, +47 % d'effectif en un an"],"communication-interne":["10","newsletters et 7 e-coffees"],"merch":[["220","goodies livrés en 2 semaines"],["50 %","des vols de l'équipe réservés"]]};
 const r1=m=>{const v=R1[m.id];if(!v)return "";const a=Array.isArray(v[0])?v:[v];return `<span class="r1"><svg aria-hidden="true"><use href="#i-up"/></svg><span>${a.map(x=>`<span class="r1l"><strong>${esc(x[0])}</strong> ${esc(x[1])}</span>`).join("")}</span></span>`};
 const card=(m,withTags)=>`<button type="button" class="card" data-id="${m.id}">${thumb(m)}<span class="cb"><b>${esc(m.n)}</b><span class="line">${esc(m.one)}</span><span class="tools st-${m.s[0]}">${tagT(m.tools)}</span>${r1(m)}${withTags?`<span class="tags">${tagS(m)}</span>`:""}</span></button>`;
+document.querySelectorAll(".mfold-btn").forEach(b=>b.addEventListener("click",()=>{b.closest(".props").classList.add("open");b.setAttribute("aria-expanded","true")}));
 const db=document.getElementById("db");
 let view="tableau";
 const CLOSED=new Set(ROLES.slice(1).map(r=>r[0]));
