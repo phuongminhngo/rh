@@ -574,7 +574,7 @@ details.tg>.tb{padding:6px 0 4px 22px}
    <button role="tab" id="v-tableau" data-v="tableau" aria-selected="true"><svg aria-hidden="true"><use href="#i-table"/></svg>Tableau</button>
    <button role="tab" id="v-role" data-v="role" aria-selected="false"><svg aria-hidden="true"><use href="#i-grid"/></svg>Galerie par rôle</button>
    <button role="tab" id="v-etape" data-v="etape" aria-selected="false"><svg aria-hidden="true"><use href="#i-board"/></svg>Galerie par étape</button>
-   <span class="count" id="mcount">16 missions · 1 an</span>
+   <span class="count" id="mcount">17 missions · 1 an</span>
   </div>
   <div id="db" role="tabpanel"></div>
  </section>
@@ -582,12 +582,39 @@ details.tg>.tb{padding:6px 0 4px 22px}
  <section aria-labelledby="projet-phare">
   <h2 id="projet-phare"><span class="emo" aria-hidden="true">⚙️</span>Étude de cas SIRH<svg class="dst hst" style="color:#f2d46b;" aria-hidden="true"><use href="#i-star"/></svg></h2>
   <div class="flag"><svg class="dst cst" style="color:#f2d46b;top:10px;right:12px;width:18px;height:18px" aria-hidden="true"><use href="#i-star"/></svg>
+   <div class="fv"><video src="video/people-manager-demo.mp4" poster="video/people-manager-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Démo de la People platform : l'espace manager"></video>
+    <video src="video/people-contractor-demo.mp4" poster="video/people-contractor-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Démo de la People platform : l'espace prestataire"></video>
+   </div>
+   <div class="fb">
+    <span class="tag tl-google">Cloudi-Fi · 2026 · construit avec un agent IA</span>
+    <h3 style="font-size:21px;margin-top:8px">People platform : tout le SIRH au même endroit</h3>
+    <p style="margin:0;font-size:14.5px">Un seul espace pour tous les sujets RH de Cloudi-Fi, avec un menu latéral et un guide sur chaque page. Chacun ne voit que ce qu'il a le droit de voir, et un agent IA tient les données à jour.</p>
+    <div class="nums">
+     <span><b>3</b>espaces : handbook, équipe, personnel</span><span><b>1</b>agent IA qui tient les données à jour</span><span><b>100 %</b>des pages avec un guide et une démo guidée</span>
+    </div>
+    <div class="src">Plateforme interne Cloudi-Fi · démos sur des données fictives</div>
+    <p class="cta-row"><a class="cta" href="#people-platform">Voir la fiche et les démos <svg aria-hidden="true"><use href="#i-ext"/></svg></a><span>espace manager et espace prestataire</span></p>
+    <div class="fdet">
+    <details class="tg">
+     <summary>Ce que contient la plateforme</summary>
+     <div class="tb"><ol class="steps">
+      <li><b>People handbook</b><span>Comment on travaille, une barre de recherche, des ressources proposées par chacun, et l'organigramme où chacun modifie sa carte.</span></li>
+      <li><b>Espace d'équipe</b><span>Les OKRs de chaque équipe, les ressources, les KPIs par personne, la validation des congés et les factures des prestataires.</span></li>
+      <li><b>Espace personnel</b><span>Tableau de bord, tâches, KPIs, congés et factures des prestataires, et des entretiens privés.</span></li>
+      <li><b>Pour les RH</b><span>Campagnes d'entretiens et de feedback des pairs, Hiring Hub, analytics de la newsletter, onboarding.</span></li>
+      <li><b>En coulisses</b><span>L'agent IA envoie les e-mails de congés, synchronise le fichier Time Off, relance les campagnes et tient l'onboarding à jour.</span></li>
+     </ol></div>
+    </details>
+    </div>
+   </div>
+  </div>
+  <div class="flag" style="margin-top:14px">
    <div class="fv"><video src="video/onboarding-channel-demo.mp4" poster="video/onboarding-channel-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Démo de l'onboarding dans Slack"></video>
     <video src="video/pto-requests-demo.mp4" poster="video/pto-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Démo des demandes de congés dans Slack"></video>
    </div>
    <div class="fb">
     <span class="tag tl-google">Cloudi-Fi · 2025 à 2026</span>
-    <h3 style="font-size:21px;margin-top:8px">Un SIRH léger dans Slack, adopté par toute l'équipe</h3>
+    <h3 style="font-size:21px;margin-top:8px">Les débuts : un SIRH léger dans Slack, adopté par toute l'équipe</h3>
     <p style="margin:0;font-size:14.5px">Les process RH vivaient dans des messages et des outils dispersés. J'ai cartographié les besoins, puis paramétré les circuits RH dans Slack et Notion, les outils que l'équipe utilisait déjà, plutôt que d'ajouter une nouvelle licence.</p>
     <div class="nums">
      <span><b>100 %</b>d'adoption des congés dans Slack</span><span><b>0 → 100 %</b>des absences prestataires suivies</span><span><b>6</b>modes opératoires illustrés</span>
@@ -698,6 +725,11 @@ details.tg>.tb{padding:6px 0 4px 22px}
 
 <script>
 const M=[
+{id:"people-platform",n:"People platform",s:["Fidéliser"],d:"Le SIRH tout-en-un, tenu à jour par un agent IA",tools:["Agent IA"],cover:{img:"video/people-manager-poster.jpg"},
+ ctx:"Un seul espace pour tous les sujets RH de Cloudi-Fi, avec un menu latéral et un guide sur chaque page. Chacun ne voit que ce qu'il a le droit de voir.",
+ did:"J'ai conçu la plateforme avec un agent IA : le People handbook, un espace d'équipe, un espace personnel et des pages réservées aux RH. L'agent IA tient les données à jour en coulisses.",
+ items:["People handbook : comment on travaille, une barre de recherche, des ressources proposées par chacun et validées par la direction ou les RH, et l'organigramme où chacun modifie sa carte","Espace d'équipe : OKRs de chaque équipe, ressources, KPIs par personne pour les managers, validation des congés avec les soldes, factures des prestataires","Espace personnel : tableau de bord, tâches, KPIs, congés et factures des prestataires, entretiens privés","Pour les RH : campagnes d'entretiens et de feedback des pairs, Hiring Hub, analytics de la newsletter et des e-coffees, onboarding, pages LinkedIn","Partout : un guide et une démo guidée sur chaque page, un bouton commentaire, un journal des modifications, « voir en tant que » pour les managers et les RH","En coulisses : l'agent IA envoie les e-mails de congés, synchronise le fichier Time Off, relance les campagnes et tient l'onboarding à jour"],
+ parts:[{t:"Démo : l'espace manager",d:"Valider les congés, suivre les soldes, les factures et les KPIs de l'équipe",tool:"Démo guidée",v:"video/people-manager-demo.mp4",p:"video/people-manager-poster.jpg"},{t:"Démo : l'espace prestataire",d:"Poser un congé, suivre son solde et le calendrier partagé, envoyer une facture",tool:"Démo guidée",v:"video/people-contractor-demo.mp4",p:"video/people-contractor-poster.jpg"}]},
 {id:"dashboard",n:"Tableau de bord RH",s:["Fidéliser"],d:"Reporting RH automatisé sur Excel",tools:["Excel"],co:"Projet personnel",cover:{img:"portfolio/dashboard.jpg"},
  ctx:"Un projet personnel, sur des données fictives, pour montrer ma méthode de reporting RH.",
  did:"Un tableau de bord RH qui se met à jour seul : effectif, entrées et sorties, turnover, absentéisme et répartition par équipe et par contrat, prestataires et EOR compris.",items:["Données structurées en tableaux (effectifs, absences), faciles à mettre à jour","Indicateurs calculés par formules, à partir d'une date de référence modifiable","Effectif mensuel et jours d'absence sur 12 mois","Règles de calcul documentées dans le fichier"],
@@ -765,15 +797,15 @@ const M=[
 {id:"seminaire",n:"Récap séminaire",s:["Fidéliser"],d:"Le séminaire d'équipe en vidéo",tools:["CapCut","YouTube","DaVinci Resolve","Canva"],cover:{play:2},
  did:"Le séminaire d'équipe, en deux vidéos.",yt:[["-QRRf9kWArk","Séminaire 2026"],["L2NsrmncVag","Séminaire 2025"]]}
 ];
-const ONE={"dashboard":"Effectif, turnover et absentéisme, recalculés automatiquement","site":"Deux pages repensées pour parler aux futurs candidats","linkedin":"124 589 impressions de sept. 2025 à nov. 2026, 100 % organiques","ambassadeurs":"Une communauté qui raconte son expérience","webinar":"Imaginé, coordonné et animé de A à Z","interviews":"Les fondateurs racontent l'entreprise, face caméra","temoignages":"Cinq nouvelles recrues, cinq vidéos en une semaine","recrutement":"Un recrutement qui avance tout seul","starting-guide":"Un accueil qui commence avant le premier jour","videos-onboarding":"Les nouveaux expliquent l'arrivée aux suivants","communication-interne":"Une culture d'équipe qui se vit toute l'année","merch":"Goodies et vols pour le séminaire de Marbella","seminaire":"Le séminaire, raconté en vidéo","calendrier-presta":"Les absences des prestataires, visibles par tous","entretien-annuel":"Un cycle d'entretien qui se relance tout seul","conges-slack":"Poser un congé sans quitter Slack","okrs-slack":"Les objectifs de chaque équipe, chaque semaine","handbook":"Le guide du collaborateur, là où l'équipe travaille"};
+const ONE={"people-platform":"Tout le SIRH au même endroit, tenu à jour par un agent IA","dashboard":"Effectif, turnover et absentéisme, recalculés automatiquement","site":"Deux pages repensées pour parler aux futurs candidats","linkedin":"124 589 impressions de sept. 2025 à nov. 2026, 100 % organiques","ambassadeurs":"Une communauté qui raconte son expérience","webinar":"Imaginé, coordonné et animé de A à Z","interviews":"Les fondateurs racontent l'entreprise, face caméra","temoignages":"Cinq nouvelles recrues, cinq vidéos en une semaine","recrutement":"Un recrutement qui avance tout seul","starting-guide":"Un accueil qui commence avant le premier jour","videos-onboarding":"Les nouveaux expliquent l'arrivée aux suivants","communication-interne":"Une culture d'équipe qui se vit toute l'année","merch":"Goodies et vols pour le séminaire de Marbella","seminaire":"Le séminaire, raconté en vidéo","calendrier-presta":"Les absences des prestataires, visibles par tous","entretien-annuel":"Un cycle d'entretien qui se relance tout seul","conges-slack":"Poser un congé sans quitter Slack","okrs-slack":"Les objectifs de chaque équipe, chaque semaine","handbook":"Le guide du collaborateur, là où l'équipe travaille"};
 M.forEach(m=>m.one=ONE[m.id]||m.d);
-const SOFT={"dashboard":["Analyse de données","Rigueur"],"site":["Sens du design","Rigueur"],"linkedin":["Ligne éditoriale","Analyse de données"],"ambassadeurs":["Animation de communauté","Persuasion"],"webinar":["Gestion de projet","Prise de parole"],"interviews":["Écoute","Storytelling"],"temoignages":["Organisation","Mise en confiance"],"recrutement":["Structuration","Autonomie"],"starting-guide":["Empathie","Pédagogie"],"videos-onboarding":["Écoute","Créativité"],"communication-interne":["Créativité","Régularité"],"merch":["Négociation","Gestion de projet"],"seminaire":["Storytelling","Créativité"],"calendrier-presta":["Organisation","Sens du service"],"entretien-annuel":["Structuration","Confidentialité"],"conges-slack":["Simplification","Autonomie"],"okrs-slack":["Rigueur","Vision d'ensemble"],"handbook":["Pédagogie","Conduite du changement"]};
+const SOFT={"people-platform":["Vision d'ensemble","Confidentialité"],"dashboard":["Analyse de données","Rigueur"],"site":["Sens du design","Rigueur"],"linkedin":["Ligne éditoriale","Analyse de données"],"ambassadeurs":["Animation de communauté","Persuasion"],"webinar":["Gestion de projet","Prise de parole"],"interviews":["Écoute","Storytelling"],"temoignages":["Organisation","Mise en confiance"],"recrutement":["Structuration","Autonomie"],"starting-guide":["Empathie","Pédagogie"],"videos-onboarding":["Écoute","Créativité"],"communication-interne":["Créativité","Régularité"],"merch":["Négociation","Gestion de projet"],"seminaire":["Storytelling","Créativité"],"calendrier-presta":["Organisation","Sens du service"],"entretien-annuel":["Structuration","Confidentialité"],"conges-slack":["Simplification","Autonomie"],"okrs-slack":["Rigueur","Vision d'ensemble"],"handbook":["Pédagogie","Conduite du changement"]};
 const resCell=m=>m.res?m.res.map(r=>`<b>${esc(r[0])}</b> ${esc(r[1])}`).join("<br>"):esc(m.one);
 const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
 function typeInto(el,c,txt,speed){clearTimeout(el._t);if(c)c.classList.remove("done");if(RM){el.textContent=txt;if(c)c.classList.add("done");return}let i=0;el.textContent="";(function step(){el.textContent=txt.slice(0,++i);if(i<txt.length){el._t=setTimeout(step,txt[i-1]===","?220:speed)}else if(c){el._t=setTimeout(()=>c.classList.add("done"),900)}})()}
 const STAGES=["Attirer","Recruter","Intégrer","Développer","Fidéliser"];
 const ROLES=[["SIRH","tl-google"],["People Ops","tl-slack"],["Recrutement","red"],["Marque employeur","tl-photoshop"]];
-const ROLE_OF={"dashboard":["SIRH"],"site":["Recrutement","Marque employeur"],"linkedin":["Marque employeur"],"ambassadeurs":["Marque employeur"],"webinar":["Marque employeur"],"interviews":["Marque employeur"],"temoignages":["Recrutement","Marque employeur"],"recrutement":["Recrutement","SIRH"],"starting-guide":["SIRH","People Ops"],"videos-onboarding":["Marque employeur","People Ops"],"communication-interne":["Marque employeur","People Ops"],"merch":["People Ops"],"seminaire":["Marque employeur"],"calendrier-presta":["SIRH"],"entretien-annuel":["SIRH","People Ops"],"conges-slack":["SIRH"],"okrs-slack":["SIRH","People Ops"],"handbook":["SIRH","People Ops"]};
+const ROLE_OF={"people-platform":["SIRH","People Ops"],"dashboard":["SIRH"],"site":["Recrutement","Marque employeur"],"linkedin":["Marque employeur"],"ambassadeurs":["Marque employeur"],"webinar":["Marque employeur"],"interviews":["Marque employeur"],"temoignages":["Recrutement","Marque employeur"],"recrutement":["Recrutement","SIRH"],"starting-guide":["SIRH","People Ops"],"videos-onboarding":["Marque employeur","People Ops"],"communication-interne":["Marque employeur","People Ops"],"merch":["People Ops"],"seminaire":["Marque employeur"],"calendrier-presta":["SIRH"],"entretien-annuel":["SIRH","People Ops"],"conges-slack":["SIRH"],"okrs-slack":["SIRH","People Ops"],"handbook":["SIRH","People Ops"]};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tagS=m=>m.s.map(s=>`<span class="tag ${s}">${s}</span>`).join("");
 const TL={Excel:"tl-ms",Notion:"tl-notion",Slack:"tl-slack",Tally:"tl-tally"};

@@ -574,7 +574,7 @@ details.tg>.tb{padding:6px 0 4px 22px}
    <button role="tab" id="v-tableau" data-v="tableau" aria-selected="true"><svg aria-hidden="true"><use href="#i-table"/></svg>Table</button>
    <button role="tab" id="v-role" data-v="role" aria-selected="false"><svg aria-hidden="true"><use href="#i-grid"/></svg>Gallery by role</button>
    <button role="tab" id="v-etape" data-v="etape" aria-selected="false"><svg aria-hidden="true"><use href="#i-board"/></svg>Gallery by stage</button>
-   <span class="count" id="mcount">16 missions · 1 year</span>
+   <span class="count" id="mcount">17 missions · 1 year</span>
   </div>
   <div id="db" role="tabpanel"></div>
  </section>
@@ -582,12 +582,39 @@ details.tg>.tb{padding:6px 0 4px 22px}
  <section aria-labelledby="projet-phare">
   <h2 id="projet-phare"><span class="emo" aria-hidden="true">⚙️</span>HRIS case study<svg class="dst hst" style="color:#f2d46b;" aria-hidden="true"><use href="#i-star"/></svg></h2>
   <div class="flag"><svg class="dst cst" style="color:#f2d46b;top:10px;right:12px;width:18px;height:18px" aria-hidden="true"><use href="#i-star"/></svg>
+   <div class="fv"><video src="video/people-manager-demo.mp4" poster="video/people-manager-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="People platform demo: the manager space"></video>
+    <video src="video/people-contractor-demo.mp4" poster="video/people-contractor-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="People platform demo: the contractor space"></video>
+   </div>
+   <div class="fb">
+    <span class="tag tl-google">Cloudi-Fi · 2026 · built with an AI agent</span>
+    <h3 style="font-size:21px;margin-top:8px">People platform: all of HRIS in one place</h3>
+    <p style="margin:0;font-size:14.5px">One place for every people topic at Cloudi-Fi, with a sidebar and a guide on every page. Each person sees only what they are allowed to see, and an AI agent keeps the data up to date.</p>
+    <div class="nums">
+     <span><b>3</b>spaces: handbook, team, personal</span><span><b>1</b>AI agent that keeps the data up to date</span><span><b>100%</b>of pages with a guide and a guided demo</span>
+    </div>
+    <div class="src">Cloudi-Fi internal platform · demos on dummy data</div>
+    <p class="cta-row"><a class="cta" href="#people-platform">See the details and demos <svg aria-hidden="true"><use href="#i-ext"/></svg></a><span>manager space and contractor space</span></p>
+    <div class="fdet">
+    <details class="tg">
+     <summary>What the platform holds</summary>
+     <div class="tb"><ol class="steps">
+      <li><b>People handbook</b><span>How we work, a search bar, resources anyone can suggest, and the org chart where everyone edits their own card.</span></li>
+      <li><b>Team space</b><span>Every team's OKRs, resources, KPIs per person, time-off approvals and contractor invoices.</span></li>
+      <li><b>Personal space</b><span>Dashboard, tasks, KPIs, time off and invoices for contractors, and private reviews.</span></li>
+      <li><b>For HR</b><span>Review and peer feedback campaigns, Hiring Hub, newsletter analytics, onboarding.</span></li>
+      <li><b>Behind the scenes</b><span>The AI agent sends time-off emails, syncs the Time Off sheet, sends campaign reminders and keeps onboarding up to date.</span></li>
+     </ol></div>
+    </details>
+    </div>
+   </div>
+  </div>
+  <div class="flag" style="margin-top:14px">
    <div class="fv"><video src="video/onboarding-channel-demo.mp4" poster="video/onboarding-channel-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Demo of onboarding in Slack"></video>
     <video src="video/pto-requests-demo.mp4" poster="video/pto-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Demo of time-off requests in Slack"></video>
    </div>
    <div class="fb">
     <span class="tag tl-google">Cloudi-Fi · 2025 to 2026</span>
-    <h3 style="font-size:21px;margin-top:8px">A lightweight HRIS in Slack, adopted by the whole team</h3>
+    <h3 style="font-size:21px;margin-top:8px">Where it started: a lightweight HRIS in Slack, adopted by the whole team</h3>
     <p style="margin:0;font-size:14.5px">HR processes lived in messages and scattered tools. I mapped the needs, then configured the HR flows in Slack and Notion, the tools the team already used, rather than adding a new licence.</p>
     <div class="nums">
      <span><b>100%</b>adoption of time off in Slack</span><span><b>0 → 100%</b>of contractor absences tracked</span><span><b>6</b>illustrated user guides</span>
@@ -698,6 +725,11 @@ details.tg>.tb{padding:6px 0 4px 22px}
 
 <script>
 const M=[
+{id:"people-platform",n:"People platform",s:["Retain"],d:"All-in-one HRIS, kept up to date by an AI agent",tools:["AI agent"],cover:{img:"video/people-manager-poster.jpg"},
+ ctx:"One place for every people topic at Cloudi-Fi, with a sidebar and a guide on every page. Each person sees only what they are allowed to see.",
+ did:"I designed the platform with an AI agent: the People handbook, a team space, a personal space and pages for HR only. The AI agent keeps the data up to date behind the scenes.",
+ items:["People handbook: how we work, a search bar, resources anyone can suggest (approved by leadership or HR), and the org chart where everyone edits their own card","Team space: every team's OKRs, resources, KPIs per person for managers, time-off approvals with balances, contractor invoices","Personal space: dashboard, tasks, KPIs, time off and invoices for contractors, private reviews","For HR: review and peer feedback campaigns, Hiring Hub, newsletter and e-coffee analytics, onboarding, LinkedIn pages","Everywhere: a guide and a guided demo on every page, a comment button, a change log, “view as” for managers and HR","Behind the scenes: the AI agent sends time-off emails, syncs the Time Off sheet, sends campaign reminders and keeps onboarding up to date"],
+ parts:[{t:"Demo: the manager space",d:"Approve time off, follow the team's balances, invoices and KPIs",tool:"Guided demo",v:"video/people-manager-demo.mp4",p:"video/people-manager-poster.jpg"},{t:"Demo: the contractor space",d:"Request time off, follow your balance and the shared calendar, send an invoice",tool:"Guided demo",v:"video/people-contractor-demo.mp4",p:"video/people-contractor-poster.jpg"}]},
 {id:"dashboard",n:"HR dashboard",s:["Retain"],d:"Automated HR reporting in Excel",tools:["Excel"],co:"Personal project",cover:{img:"portfolio/dashboard.jpg"},
  ctx:"A personal project, on dummy data, to show how I approach HR reporting.",
  did:"An HR dashboard that updates itself: headcount, hires and leavers, turnover, absenteeism, and split by team and contract type, contractors and EOR included.",items:["Data structured as tables (headcount, absences), easy to update","KPIs calculated with formulas from an editable reference date","Monthly headcount and absence days over 12 months","Calculation rules documented in the file"],
@@ -765,15 +797,15 @@ const M=[
 {id:"seminaire",n:"Offsite recap",s:["Retain"],d:"The team offsite on video",tools:["CapCut","YouTube","DaVinci Resolve","Canva"],cover:{play:2},
  did:"The team offsite, in two videos.",yt:[["-QRRf9kWArk","Offsite 2026"],["L2NsrmncVag","Offsite 2025"]]}
 ];
-const ONE={"dashboard":"Headcount, turnover and absenteeism, recalculated automatically","site":"Two pages redesigned to speak to future candidates","linkedin":"124,589 impressions from Sept 2025 to Nov 2026, 100% organic","ambassadeurs":"A community that shares its experience","webinar":"Conceived, coordinated and hosted end to end","interviews":"The founders tell the company's story, on camera","temoignages":"Five new hires, five videos in one week","recrutement":"Recruitment that runs itself","starting-guide":"A welcome that starts before day one","videos-onboarding":"New joiners explain arriving to the next ones","communication-interne":"A team culture lived all year round","merch":"Merch and flights for the Marbella offsite","seminaire":"The offsite, told on video","calendrier-presta":"Contractor absences, visible to everyone","entretien-annuel":"A review cycle that sends its own reminders","conges-slack":"Book time off without leaving Slack","okrs-slack":"Every team's goals, every week","handbook":"The employee guide, where the team works"};
+const ONE={"people-platform":"All of HRIS in one place, kept up to date by an AI agent","dashboard":"Headcount, turnover and absenteeism, recalculated automatically","site":"Two pages redesigned to speak to future candidates","linkedin":"124,589 impressions from Sept 2025 to Nov 2026, 100% organic","ambassadeurs":"A community that shares its experience","webinar":"Conceived, coordinated and hosted end to end","interviews":"The founders tell the company's story, on camera","temoignages":"Five new hires, five videos in one week","recrutement":"Recruitment that runs itself","starting-guide":"A welcome that starts before day one","videos-onboarding":"New joiners explain arriving to the next ones","communication-interne":"A team culture lived all year round","merch":"Merch and flights for the Marbella offsite","seminaire":"The offsite, told on video","calendrier-presta":"Contractor absences, visible to everyone","entretien-annuel":"A review cycle that sends its own reminders","conges-slack":"Book time off without leaving Slack","okrs-slack":"Every team's goals, every week","handbook":"The employee guide, where the team works"};
 M.forEach(m=>m.one=ONE[m.id]||m.d);
-const SOFT={"dashboard":["Data analysis","Rigour"],"site":["Design sense","Rigour"],"linkedin":["Editorial line","Data analysis"],"ambassadeurs":["Community building","Persuasion"],"webinar":["Project management","Public speaking"],"interviews":["Listening","Storytelling"],"temoignages":["Organisation","Putting people at ease"],"recrutement":["Structuring","Autonomy"],"starting-guide":["Empathy","Teaching"],"videos-onboarding":["Listening","Creativity"],"communication-interne":["Creativity","Consistency"],"merch":["Negotiation","Project management"],"seminaire":["Storytelling","Creativity"],"calendrier-presta":["Organisation","Service mindset"],"entretien-annuel":["Structuring","Confidentiality"],"conges-slack":["Simplification","Autonomy"],"okrs-slack":["Rigour","Big-picture thinking"],"handbook":["Teaching","Change management"]};
+const SOFT={"people-platform":["Big picture","Data privacy"],"dashboard":["Data analysis","Rigour"],"site":["Design sense","Rigour"],"linkedin":["Editorial line","Data analysis"],"ambassadeurs":["Community building","Persuasion"],"webinar":["Project management","Public speaking"],"interviews":["Listening","Storytelling"],"temoignages":["Organisation","Putting people at ease"],"recrutement":["Structuring","Autonomy"],"starting-guide":["Empathy","Teaching"],"videos-onboarding":["Listening","Creativity"],"communication-interne":["Creativity","Consistency"],"merch":["Negotiation","Project management"],"seminaire":["Storytelling","Creativity"],"calendrier-presta":["Organisation","Service mindset"],"entretien-annuel":["Structuring","Confidentiality"],"conges-slack":["Simplification","Autonomy"],"okrs-slack":["Rigour","Big-picture thinking"],"handbook":["Teaching","Change management"]};
 const resCell=m=>m.res?m.res.map(r=>`<b>${esc(r[0])}</b> ${esc(r[1])}`).join("<br>"):esc(m.one);
 const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
 function typeInto(el,c,txt,speed){clearTimeout(el._t);if(c)c.classList.remove("done");if(RM){el.textContent=txt;if(c)c.classList.add("done");return}let i=0;el.textContent="";(function step(){el.textContent=txt.slice(0,++i);if(i<txt.length){el._t=setTimeout(step,txt[i-1]===","?220:speed)}else if(c){el._t=setTimeout(()=>c.classList.add("done"),900)}})()}
 const STAGES=["Attract","Recruit","Onboard","Develop","Retain"];
 const ROLES=[["HRIS","tl-google"],["People Ops","tl-slack"],["Recruitment","red"],["Employer branding","tl-photoshop"]];
-const ROLE_OF={"dashboard":["HRIS"],"site":["Recruitment","Employer branding"],"linkedin":["Employer branding"],"ambassadeurs":["Employer branding"],"webinar":["Employer branding"],"interviews":["Employer branding"],"temoignages":["Recruitment","Employer branding"],"recrutement":["Recruitment","HRIS"],"starting-guide":["HRIS","People Ops"],"videos-onboarding":["Employer branding","People Ops"],"communication-interne":["Employer branding","People Ops"],"merch":["People Ops"],"seminaire":["Employer branding"],"calendrier-presta":["HRIS"],"entretien-annuel":["HRIS","People Ops"],"conges-slack":["HRIS"],"okrs-slack":["HRIS","People Ops"],"handbook":["HRIS","People Ops"]};
+const ROLE_OF={"people-platform":["HRIS","People Ops"],"dashboard":["HRIS"],"site":["Recruitment","Employer branding"],"linkedin":["Employer branding"],"ambassadeurs":["Employer branding"],"webinar":["Employer branding"],"interviews":["Employer branding"],"temoignages":["Recruitment","Employer branding"],"recrutement":["Recruitment","HRIS"],"starting-guide":["HRIS","People Ops"],"videos-onboarding":["Employer branding","People Ops"],"communication-interne":["Employer branding","People Ops"],"merch":["People Ops"],"seminaire":["Employer branding"],"calendrier-presta":["HRIS"],"entretien-annuel":["HRIS","People Ops"],"conges-slack":["HRIS"],"okrs-slack":["HRIS","People Ops"],"handbook":["HRIS","People Ops"]};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tagS=m=>m.s.map(s=>`<span class="tag ${s}">${s}</span>`).join("");
 const TL={Excel:"tl-ms",Notion:"tl-notion",Slack:"tl-slack",Tally:"tl-tally"};
