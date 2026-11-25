@@ -296,6 +296,8 @@ details.tg>summary:hover{background:var(--hover)}
 details.tg>summary::before{content:"";flex:none;width:0;height:0;border-left:6px solid var(--fg-2);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;transition:transform .15s}
 details.tg[open]>summary::before{transform:rotate(90deg)}
 details.tg>.tb{padding:6px 0 4px 22px}
+details.tg.more{margin-top:16px}
+details.tg.more>summary{font-size:16px;font-weight:600}
 .steps{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .steps li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:10px;font-size:14px}
 .steps li b{font-weight:600}
@@ -608,7 +610,9 @@ details.tg>.tb{padding:6px 0 4px 22px}
     </div>
    </div>
   </div>
-  <div class="flag" style="margin-top:14px">
+  <details class="tg more">
+   <summary>Voir plus : les débuts, un SIRH léger dans Slack (2025 à 2026)</summary>
+  <div class="flag" style="margin-top:10px">
    <div class="fv"><video src="video/onboarding-channel-demo.mp4" poster="video/onboarding-channel-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Démo de l'onboarding dans Slack"></video>
     <video src="video/pto-requests-demo.mp4" poster="video/pto-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Démo des demandes de congés dans Slack"></video>
    </div>
@@ -655,6 +659,7 @@ details.tg>.tb{padding:6px 0 4px 22px}
     </div>
    </div>
   </div>
+  </details>
  </section>
 
  <section class="two" aria-label="Expérience et formation">
